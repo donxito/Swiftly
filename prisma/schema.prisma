@@ -13,17 +13,17 @@ datasource db {
 }
 
 model Product {
-  id                    String                @id @default(uuid())
-  name                  String
-  priceInDk             Int // in danish kroner
-  filePath              String
-  imagePath             String
-  description           String
-  isAvaibleForPurchase  Boolean               @default(true)
-  createdAt             DateTime              @default(now())
-  updatedAt             DateTime              @updatedAt
-  orders                Order[]
-  downloadVerifications DowloadVerification[]
+  id                     String                @id @default(uuid())
+  name                   String
+  priceInDk              Int // in danish kroner
+  filePath               String
+  imagePath              String
+  description            String
+  isAvailableForPurchase Boolean               @default(true)
+  createdAt              DateTime              @default(now())
+  updatedAt              DateTime              @updatedAt
+  orders                 Order[]
+  downloadVerifications  DowloadVerification[]
 }
 
 model User {
