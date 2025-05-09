@@ -39,8 +39,8 @@ async function getUserData() {
 
 async function getProductData() {
   const [activeCount, inactiveCount] = await Promise.all([
-    prisma.product.count({ where: { isAvaibleForPurchase: true } }),
-    prisma.product.count({ where: { isAvaibleForPurchase: true } }),
+    prisma.product.count({ where: { isAvailableForPurchase: true } }),
+    prisma.product.count({ where: { isAvailableForPurchase: false } }),
   ]);
 
   await wait(2000); // testing for delayed loading
